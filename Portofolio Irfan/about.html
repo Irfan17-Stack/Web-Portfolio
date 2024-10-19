@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="Index.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <script src="script.js"></script>
+    <title>About</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZZJREFUSEvlln1ygyAQxd/2JPYkTU5SPUntSTQnqTlJPEmoC0RBgYUy00ynzDj5w8BvPx5vJTxp0ZO4+LtgNaAFMPNDnf7NWtUZqxFKkwg9veMzi6r/XrHUgAaE2++DL/hY8u01WOFMHabcPOoy3sAztXjNhZrOVCw14gvAaXkmanEuOUoEqwEnvOBtL5xYf9WIYSn7lTqMqUCSYCejg2p1QKQzXvurrxZheIgNd1xiVywIttnwAVxGXjMUOlc8yhEWMY75Jhje19h9k913uN8HsJeJ2R3sn1MNT1g2aK7EA85Bs+I9uAfOhersBOPQvYZ2NbNMxda+r2CvP8K9zDUO2w6Gm+wdeArsRegq1O1vyjgOFXRs1S+1EcwWIaEPKdMBR43DuxGBCsbElVRmyjhybkTUuVLKTPW3RJySgWzKtMIIGccqXHdoCDYqWyYfxqZuZ23IOA7Cu2vLTE4qEbz325hxlAyIaI9Th0jGkRtAUca5xpEDLwNXfHHsg/kpuPiLowq8jj6gkQa9VO6ijKXDSt7/P/A3S/TkH+n2ZyEAAAAASUVORK5CYII=">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-icon">&#9776;</div>
+        <a href="index.html" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="skills.html">Skill</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="wrapper clearfix">
+        <div class="left">
+      
+          <div class="name-hero">
+      
+            <div class="me-img"></div>
+    
+            <div class="name-text">
+      
+              <h1>Irfan  <em style="color: orange;">Firmansyah</em></h1>
+              <p>irfanf0411@gmail.com</p>
+              <p>+(62) 812-9499-7287</p>
+      
+            </div>
+      
+          </div>
+      
+        </div>
+        <div class="right">
+      
+        <div class="inner">
+       
+       
+        <section>
+            <h1>Education</h1>
+            <p>[2017 — 2020]</p>
+            <p><em>Highschool | SMAN 1 Pariaman</em></p>
+            <p>Achieving 2nd place in the 1 Juz Tahfidz competition at the school level.</p><br>
+            <p>[2022 — Present]</p>
+            <p><em>Bachelor Degree | Andalas University</em></p>
+            <p>Achieving 1st place in the 5 Juz Tahfidz competition at the campus level.</p>
+        </section>
+        <section>
+            <h1>Experience</h1>
+            <p>[Aug 2020 — Aug 2021]</p>
+            <p><em>Villa Qur'an 2021 | </em></p>
+            <p>Tahfidz scholarship student.</p><br>
+            <p>[Jan 2023 — Dec 2023]</p>
+            <p><em> BEM KM UNAND | Kementrian Dalam Negri </em></p>
+            <p>"Foster and establish good relationships with student associations, student activity units (UKM), and other student organizations within the campus environment."</p><br>
+            <p>[Jan 2023 — Des 2024]</p>
+            <p><em>Forum Studi Islam Al-Fatih FTI | Ketua Umum </em></p>
+            <p>An Islamic Studying Organization in Faculty Information Technology.</p>
+        </section>
+        </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navbar = document.querySelector('.navbar');
+            const overlay = document.querySelector('.overlay');
+
+            menuIcon.addEventListener('click', function () {
+                navbar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        });
+    </script>
+    <div class="overlay"></div>
+    <footer class="footer">
+        <p>&copy; 2024 Irfan Firmansyah. All rights reserved.</p>
+    </footer>
+</body>
+</html>

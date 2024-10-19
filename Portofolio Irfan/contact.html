@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="Index.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="script.js"></script>
+    <title>Contact</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZZJREFUSEvlln1ygyAQxd/2JPYkTU5SPUntSTQnqTlJPEmoC0RBgYUy00ynzDj5w8BvPx5vJTxp0ZO4+LtgNaAFMPNDnf7NWtUZqxFKkwg9veMzi6r/XrHUgAaE2++DL/hY8u01WOFMHabcPOoy3sAztXjNhZrOVCw14gvAaXkmanEuOUoEqwEnvOBtL5xYf9WIYSn7lTqMqUCSYCejg2p1QKQzXvurrxZheIgNd1xiVywIttnwAVxGXjMUOlc8yhEWMY75Jhje19h9k913uN8HsJeJ2R3sn1MNT1g2aK7EA85Bs+I9uAfOhersBOPQvYZ2NbNMxda+r2CvP8K9zDUO2w6Gm+wdeArsRegq1O1vyjgOFXRs1S+1EcwWIaEPKdMBR43DuxGBCsbElVRmyjhybkTUuVLKTPW3RJySgWzKtMIIGccqXHdoCDYqWyYfxqZuZ23IOA7Cu2vLTE4qEbz325hxlAyIaI9Th0jGkRtAUca5xpEDLwNXfHHsg/kpuPiLowq8jj6gkQa9VO6ijKXDSt7/P/A3S/TkH+n2ZyEAAAAASUVORK5CYII=">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-icon">&#9776;</div>
+        <a href="index.html" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skill</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-text">
+                <div class="divider"></div>
+                <h2><box-icon name='user-circle' type='solid' color='#000000' ></box-icon>Contact Me!</h2>
+                <p>Need to get in touch with me? Please go ahead and fill out the form with your inquiry.</p>
+            </div>
+            <form class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+                <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                SecureToken : "93570682-5d3c-421c-82a4-3b43c6cf8c0d",
+                To : 'richardflint35@gmail.com',
+                From : 'richardflint35@gmail.com',
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + document.getElementById("name").value 
+                + "<br> Phone No: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Successfully")
+            );
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuIcon = document.querySelector('.menu-icon');
+                const navbar = document.querySelector('.navbar');
+                const overlay = document.querySelector('.overlay');
+
+                menuIcon.addEventListener('click', function () {
+                    navbar.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                });
+            });
+        </script>
+    </div>
+    <div class="overlay"></div>
+    <footer class="footer">
+        <p>&copy; 2024 Irfan Firmansyah. All rights reserved.</p>
+    </footer>
+</body>
+</html>
